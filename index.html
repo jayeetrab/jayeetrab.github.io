@@ -2,28 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jayeetra Bhattacharjee · AI Engineer & Business Analytics</title>
+  <title>Jayeetra Bhattacharjee · AI & Analytics Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="AI/ML Engineer and Business Analytics MSc student building high-impact AI, LLM, and analytics solutions for enterprises.">
+  <meta name="description" content="AI/ML Engineer & Business Analytics MSc portfolio – enterprise AI, LLM and analytics projects.">
   <style>
     :root {
       --bg: #020617;
-      --bg-elevated: #020617;
-      --panel: rgba(15,23,42,0.92);
-      --border-subtle: rgba(51,65,85,0.85);
-      --border-strong: rgba(148,163,184,0.6);
+      --surface: #020617;
+      --surface-alt: #020617;
+      --border-soft: rgba(148,163,184,0.35);
+      --border-strong: rgba(148,163,184,0.55);
       --accent: #38bdf8;
-      --accent-soft: rgba(56,189,248,0.15);
-      --accent-2: #a855f7;
-      --accent-3: #22c55e;
+      --accent-soft: rgba(56,189,248,0.12);
       --text-main: #e5e7eb;
       --text-soft: #9ca3af;
       --text-faint: #6b7280;
-      --shadow-strong: 0 24px 80px rgba(15,23,42,1);
       --radius-lg: 24px;
       --radius-md: 18px;
       --radius-pill: 999px;
-      --blur: 18px;
+      --shadow-soft: 0 18px 40px rgba(15,23,42,0.9);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,680 +28,372 @@
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top, #0b1120 0, #000 55%) fixed,
-        radial-gradient(circle at bottom right, #020617 0, #000 60%) fixed;
+        radial-gradient(circle at top, #020617 0, #000 60%) fixed;
       color: var(--text-main);
       min-height: 100vh;
-      padding: 20px 16px 32px;
+      padding: 24px 16px 40px;
       -webkit-font-smoothing: antialiased;
     }
 
     .page-shell {
       max-width: 1120px;
       margin: 0 auto;
+      background: linear-gradient(145deg, rgba(15,23,42,0.98), rgba(15,23,42,0.96));
       border-radius: var(--radius-lg);
-      background:
-        radial-gradient(circle at top left, rgba(56,189,248,0.18), transparent 60%),
-        radial-gradient(circle at bottom right, rgba(147,51,234,0.12), transparent 60%),
-        linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.96));
-      border: 1px solid rgba(148,163,184,0.55);
-      box-shadow:
-        var(--shadow-strong),
-        0 0 0 1px rgba(30,64,175,0.25);
-      padding: 18px 18px 24px;
-      position: relative;
-      overflow: hidden;
+      border: 1px solid rgba(148,163,184,0.4);
+      box-shadow: var(--shadow-soft);
+      padding: 22px 22px 26px;
     }
 
-    .page-shell::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background:
-        radial-gradient(circle at 10% 0%, rgba(59,130,246,0.2), transparent 55%),
-        radial-gradient(circle at 90% 20%, rgba(56,189,248,0.16), transparent 55%);
-      opacity: 0.65;
-      pointer-events: none;
+    @media (max-width: 768px) {
+      .page-shell {
+        padding: 16px 14px 22px;
+      }
     }
 
-    .page-inner {
-      position: relative;
-      z-index: 1;
-    }
-
-    header {
+    .top-nav {
       display: flex;
-      gap: 18px;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 18px;
-      flex-wrap: wrap;
-    }
-
-    .identity {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      max-width: 640px;
-    }
-
-    .role-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(148,163,184,0.55);
-      background: radial-gradient(circle at top left, rgba(15,23,42,0.95), rgba(15,23,42,0.85));
-      color: var(--text-soft);
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .role-indicator {
-      width: 9px;
-      height: 9px;
-      border-radius: var(--radius-pill);
-      background: radial-gradient(circle at 35% 30%, #22c55e, #4ade80);
-      box-shadow: 0 0 0 4px rgba(22,163,74,0.3);
-    }
-
-    h1 {
-      font-size: clamp(26px, 4vw, 32px);
-      letter-spacing: 0.02em;
-      line-height: 1.15;
-    }
-
-    h1 span {
-      background: linear-gradient(110deg, #e5e7eb, #38bdf8, #a855f7);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .headline {
-      font-size: 14px;
-      color: var(--text-soft);
-    }
-
-    .headline strong {
-      font-weight: 600;
-      color: #e5e7eb;
-    }
-
-    .contact {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-end;
-      flex: 1;
-      min-width: 230px;
-    }
-
-    .contact-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: flex-end;
-      font-size: 13px;
-      color: var(--text-soft);
-    }
-
-    .contact-row span {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #38bdf8;
-    }
-
-    .chip-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 11px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(148,163,184,0.55);
-      background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(15,23,42,0.78));
-      color: var(--text-main);
-      font-size: 12px;
-      text-decoration: none;
-    }
-
-    .chip-link-icon {
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.7);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
-      background: rgba(15,23,42,0.95);
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(0, 2.15fr) minmax(0, 1.85fr);
       gap: 16px;
+      margin-bottom: 22px;
     }
 
-    @media (max-width: 840px) {
-      header {
-        align-items: flex-start;
-      }
-      .contact {
-        align-items: flex-start;
-      }
-      .contact-row {
-        justify-content: flex-start;
-      }
-      .layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    main section {
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border-subtle);
-      background:
-        radial-gradient(circle at top left, rgba(15,23,42,0.95), rgba(15,23,42,0.92));
-      box-shadow:
-        0 16px 50px rgba(15,23,42,0.95),
-        inset 0 0 0 1px rgba(15,23,42,0.9);
-      padding: 16px 16px 18px;
-    }
-
-    .section-label {
-      font-size: 11px;
+    .brand {
+      font-size: 14px;
       letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    .brand strong {
+      color: var(--text-main);
+    }
+
+    nav a {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      text-decoration: none;
+      margin-left: 16px;
+      white-space: nowrap;
+    }
+
+    nav a:first-of-type {
+      margin-left: 0;
+    }
+
+    nav a.active {
+      color: var(--text-main);
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 720px) {
+      .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      nav a {
+        margin-left: 0;
+      }
+    }
+
+    .intro {
+      margin-bottom: 20px;
+    }
+
+    .intro-label {
+      font-size: 11px;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 6px;
     }
 
-    h2 {
-      font-size: 16px;
-      margin-bottom: 10px;
+    .intro h1 {
+      font-size: 22px;
+      margin-bottom: 6px;
     }
 
-    p {
+    .intro h1 span {
+      background: linear-gradient(120deg, #e5e7eb, #38bdf8);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .intro p {
       font-size: 13px;
-      line-height: 1.6;
       color: var(--text-soft);
-      margin-bottom: 10px;
+      max-width: 44rem;
     }
 
-    .highlight-metric {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 3px 9px;
-      border-radius: var(--radius-pill);
-      background: var(--accent-soft);
-      border: 1px solid rgba(45,212,191,0.45);
-      color: #a5f3fc;
-      font-size: 11px;
-      margin-right: 6px;
-    }
-
-    .badge-row {
+    .intro-metrics {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 8px;
-    }
-
-    .small-badge {
-      padding: 2px 7px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(148,163,184,0.55);
-      background: rgba(15,23,42,0.98);
-      font-size: 11px;
-      color: var(--text-faint);
-    }
-
-    .timeline {
-      margin-top: 4px;
-    }
-
-    .timeline-item {
-      padding: 10px 0;
-      border-top: 1px solid rgba(30,41,59,0.9);
-    }
-
-    .timeline-item:first-of-type {
-      border-top: none;
-    }
-
-    .timeline-header {
-      display: flex;
-      justify-content: space-between;
       gap: 8px;
-      font-size: 13px;
-    }
-
-    .timeline-title {
-      font-weight: 500;
-      color: var(--text-main);
-    }
-
-    .timeline-meta {
-      font-size: 11px;
-      color: var(--text-soft);
-      text-align: right;
-      white-space: nowrap;
-    }
-
-    .timeline-body {
-      margin-top: 6px;
-      font-size: 13px;
-      color: var(--text-soft);
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    .bullet {
-      display: flex;
-      gap: 6px;
-      margin-bottom: 4px;
-      align-items: flex-start;
-    }
-
-    .bullet-dot {
-      width: 4px;
-      height: 4px;
-      border-radius: 999px;
-      margin-top: 7px;
-      background: rgba(148,163,184,0.9);
-    }
-
-    .bullet-text {
-      flex: 1;
-    }
-
-    .grid-two {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
       margin-top: 8px;
     }
 
-    @media (max-width: 640px) {
-      .grid-two {
+    .metric-pill {
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-soft);
+      border: 1px solid rgba(56,189,248,0.4);
+      color: #bae6fd;
+      font-size: 11px;
+    }
+
+    .projects-grid {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    @media (max-width: 840px) {
+      .projects-grid {
         grid-template-columns: minmax(0, 1fr);
       }
     }
 
-    .card-soft {
-      padding: 10px 10px 11px;
-      border-radius: 14px;
-      border: 1px solid rgba(30,64,175,0.45);
-      background: radial-gradient(circle at top, rgba(15,23,42,0.98), rgba(15,23,42,0.94));
+    .project-card {
+      display: block;
+      padding: 14px 14px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-soft);
+      background: rgba(15,23,42,0.97);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .project-card:hover {
+      border-color: var(--border-strong);
+      background: rgba(15,23,42,1);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(15,23,42,0.95);
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .project-title {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .project-meta {
+      font-size: 11px;
+      color: var(--text-faint);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .project-subtitle {
+      font-size: 12px;
+      color: var(--text-soft);
+      margin-bottom: 6px;
+    }
+
+    .project-excerpt {
       font-size: 12px;
       color: var(--text-soft);
     }
 
-    .card-soft h3 {
-      font-size: 13px;
-      margin-bottom: 6px;
-      color: var(--text-main);
-    }
-
-    .tag-cloud {
+    .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-top: 4px;
+      margin-top: 8px;
+      font-size: 11px;
     }
 
     .tag {
-      padding: 3px 8px;
+      padding: 2px 7px;
       border-radius: var(--radius-pill);
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(148,163,184,0.55);
-      font-size: 11px;
-      color: var(--text-soft);
-    }
-
-    .status-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-      font-size: 12px;
-      color: var(--text-soft);
-    }
-
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 3px 9px;
-      border-radius: var(--radius-pill);
-      border: 1px dashed rgba(148,163,184,0.7);
-      background: rgba(15,23,42,0.96);
-    }
-
-    .status-indicator {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 30%, #f97316, #ea580c);
-      box-shadow: 0 0 0 4px rgba(248,113,113,0.25);
+      border: 1px solid rgba(51,65,85,0.9);
+      color: var(--text-faint);
     }
 
     footer {
-      margin-top: 14px;
+      margin-top: 18px;
       font-size: 11px;
-      text-align: right;
       color: var(--text-faint);
+      text-align: right;
     }
 
     a {
       color: var(--accent);
     }
-
-    a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
   <div class="page-shell">
-    <div class="page-inner">
-      <header>
-        <div class="identity">
-          <div class="role-pill">
-            <span class="role-indicator"></span>
-            <span>AI · LLMs · Analytics · Platforms</span>
-          </div>
-          <h1><span>Jayeetra Bhattacharjee</span></h1>
-          <p class="headline">
-            AI/ML Engineer & MSc Business Analytics, specialising in enterprise‑scale LLM systems, audit & compliance automation,
-            and decision intelligence for retail, fashion, and electronics.
-          </p>
-        </div>
-        <div class="contact">
-          <div class="contact-row">
-            <span><span class="dot"></span> Bristol, United Kingdom</span>
-          </div>
-          <div class="contact-row">
-            <span>📧 <a href="mailto:jayeetra.uk@gmail.com">jayeetra.uk@gmail.com</a></span>
-            <span>📱 <a href="tel:+4407438153933">+44 07438 153933</a></span>
-          </div>
-          <div class="contact-row">
-            <a class="chip-link" href="https://www.linkedin.com" target="_blank" rel="noopener">
-              <span class="chip-link-icon">in</span>
-              <span>LinkedIn</span>
-            </a>
-            <a class="chip-link" href="https://github.com/jayeetrab" target="_blank" rel="noopener">
-              <span class="chip-link-icon">GH</span>
-              <span>GitHub</span>
-            </a>
-            <a class="chip-link" href="#projects">
-              <span class="chip-link-icon">★</span>
-              <span>Project console</span>
-            </a>
-          </div>
-        </div>
-      </header>
+    <header class="top-nav">
+      <div class="brand"><strong>Jayeetra Bhattacharjee</strong> · AI & Analytics</div>
+      <nav>
+        <a href="/" class="active">Projects</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </header>
 
-      <div class="layout">
-        <main>
-          <section>
-            <div class="section-label">Profile signal</div>
-            <h2>Consulting‑minded AI engineer for complex organisations</h2>
-            <p>
-              I design and deploy AI and LLM systems that improve decision‑making, protect revenue, and automate complex workflows
-              for large enterprises. My work blends product thinking, robust engineering, and a strong analytics foundation.
-            </p>
-            <p>
-              Recent outcomes include faster analytical cycles, higher audit and compliance accuracy, and seven‑figure revenue
-              protection for global retail and fashion brands.
-            </p>
-
-            <div class="badge-row">
-              <span class="highlight-metric">3+ yrs enterprise AI delivery</span>
-              <span class="highlight-metric">90–95% LLM ensemble accuracy</span>
-              <span class="highlight-metric">£500K+ revenue protected yearly</span>
-            </div>
-          </section>
-
-          <section id="experience">
-            <div class="section-label">Experience feed</div>
-            <h2>Where I’ve been building</h2>
-
-            <div class="timeline">
-              <div class="timeline-item">
-                <div class="timeline-header">
-                  <div class="timeline-title">AI/ML Engineer · Tata Consultancy Services</div>
-                  <div class="timeline-meta">Kolkata · Jan 2024 – Sep 2025</div>
-                </div>
-                <div class="timeline-body">
-                  <ul>
-                    <li class="bullet">
-                      <span class="bullet-dot"></span>
-                      <span class="bullet-text">
-                        Delivered analytics and LLM solutions that improved decision‑making speed by 25%, cut manual effort by 30%, and
-                        raised audit accuracy from 60% → 90%.
-                      </span>
-                    </li>
-                    <li class="bullet">
-                      <span class="bullet-dot"></span>
-                      <span class="bullet-text">
-                        Built AI‑powered audit and compliance engines covering 5,000+ monthly transactions, increasing reporting
-                        accuracy from 40% → 80% and preventing £500K+ annual revenue leakage.
-                      </span>
-                    </li>
-                    <li class="bullet">
-                      <span class="bullet-dot"></span>
-                      <span class="bullet-text">
-                        Designed and deployed a multi‑model LLM ensemble (GPT‑4, Gemini, Claude, Hugging Face) via AWS SageMaker,
-                        achieving 90–95% accuracy in production.
-                      </span>
-                    </li>
-                    <li class="bullet">
-                      <span class="bullet-dot"></span>
-                      <span class="bullet-text">
-                        Created an LLM insight‑mining engine that automated hypothesis testing, reducing analysis cycles from 3 days → 6 hours
-                        and driving adoption via tailored dashboards.
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-header">
-                  <div class="timeline-title">Java Developer · Tata Consultancy Services</div>
-                  <div class="timeline-meta">Kolkata · Jul 2022 – Dec 2023</div>
-                </div>
-                <div class="timeline-body">
-                  <ul>
-                    <li class="bullet">
-                      <span class="bullet-dot"></span>
-                      <span class="bullet-text">
-                        Engineered microservice‑driven platforms processing 100K+ daily transactions, supporting enterprise‑scale digital transformation.
-                      </span>
-                    </li>
-                    <li class="bullet">
-                      <span class="bullet-dot"></span>
-                      <span class="bullet-text">
-                        Integrated Hybris, Juspay, and OMS systems across the order and payment lifecycle for 1M+ annual orders with secure
-                        payment flows worth £2M+ annually.
-                      </span>
-                    </li>
-                    <li class="bullet">
-                      <span class="bullet-dot"></span>
-                      <span class="bullet-text">
-                        Optimised APIs and SQL reporting, reducing critical data‑retrieval times by 25%.
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-header">
-                  <div class="timeline-title">Research Assistant · University of Bristol</div>
-                  <div class="timeline-meta">Oct 2025 – Present · Part‑time</div>
-                </div>
-                <div class="timeline-body">
-                  <ul>
-                    <li class="bullet">
-                      <span class="bullet-dot"></span>
-                      <span class="bullet-text">
-                        Supporting Random Forest, XGBoost, and ensemble models for maritime behavioural prediction, with dashboards and reports
-                        for decision support in HyPACT 2.0 analytics.
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-header">
-                  <div class="timeline-title">Research Support Assistant · University of Bristol</div>
-                  <div class="timeline-meta">Oct 2025 – Nov 2025 · Part‑time</div>
-                </div>
-                <div class="timeline-body">
-                  <ul>
-                    <li class="bullet">
-                      <span class="bullet-dot"></span>
-                      <span class="bullet-text">
-                        Contributed to urban planning analytics with Dr. Cheng by preparing GIS datasets and validating LLM‑generated planning
-                        insights against ground data.
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-
-        <aside>
-          <section>
-            <div class="section-label">Live systems</div>
-            <h2 id="projects">Highlighted projects & research</h2>
-            <div class="grid-two">
-              <div class="card-soft">
-                <h3>AI‑Powered Audit Validation</h3>
-                <p>
-                  Transaction‑level validation engine for a retail client using Python and LLMs, lifting audit accuracy from 60% → 90% and
-                  safeguarding over £500K per year.
-                </p>
-              </div>
-              <div class="card-soft">
-                <h3>Compliance Reporting Engine</h3>
-                <p>
-                  AI + rule‑based compliance system that improved reporting accuracy from 40% → 80% across 5,000+ monthly transactions
-                  via automated checks and anomaly detection.
-                </p>
-              </div>
-              <div class="card-soft">
-                <h3>LLM Insight‑Mining Engine</h3>
-                <p>
-                  Multi‑model LLM engine that automates hypothesis testing and narrative generation, compressing three days of analysis
-                  into six hours of guided exploration.
-                </p>
-              </div>
-              <div class="card-soft">
-                <h3>LLM Ensemble on SageMaker</h3>
-                <p>
-                  Production‑grade ensemble combining GPT‑4, Gemini, Claude, and open‑source models, orchestrated and ranked on AWS
-                  SageMaker to reach 90–95% accuracy.
-                </p>
-              </div>
-              <div class="card-soft">
-                <h3>Talk‑to‑Data (Text‑to‑SQL)</h3>
-                <p>
-                  FastAPI + LLM backend that lets non‑technical teams query SQL databases in natural language, returning verified SQL and
-                  visual insights.
-                </p>
-              </div>
-              <div class="card-soft">
-                <h3>POS Revenue Protection</h3>
-                <p>
-                  Automated POS validation for a jewellery brand, boosting accuracy from 60% → 90% and preventing recurring revenue
-                  leakage at scale.
-                </p>
-              </div>
-            </div>
-
-            <div class="status-row">
-              <div class="status-pill">
-                <span class="status-indicator"></span>
-                <span>Exploring: AI for compliance, audit, and operational decision‑making in UK enterprises.</span>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <div class="section-label">Skills console</div>
-            <h2>What I ship with</h2>
-
-            <div class="card-soft" style="margin-bottom:8px;">
-              <h3>Core stack</h3>
-              <div class="tag-cloud">
-                <span class="tag">Python · pandas · NumPy · scikit‑learn</span>
-                <span class="tag">LLMs · Hugging Face · OpenAI · Gemini</span>
-                <span class="tag">NLP · spaCy · Transformers</span>
-                <span class="tag">Java · Spring Boot · Microservices</span>
-                <span class="tag">SQL · REST APIs</span>
-              </div>
-            </div>
-
-            <div class="card-soft" style="margin-bottom:8px;">
-              <h3>Data & platforms</h3>
-              <div class="tag-cloud">
-                <span class="tag">AWS · SageMaker</span>
-                <span class="tag">Chroma DB</span>
-                <span class="tag">Relational & NoSQL databases</span>
-                <span class="tag">ETL pipelines</span>
-                <span class="tag">Cloud ML pipelines</span>
-              </div>
-            </div>
-
-            <div class="card-soft" style="margin-bottom:8px;">
-              <h3>Analytics & delivery</h3>
-              <div class="tag-cloud">
-                <span class="tag">Predictive analytics</span>
-                <span class="tag">Text‑to‑SQL</span>
-                <span class="tag">Matplotlib · Seaborn</span>
-                <span class="tag">Workflow automation</span>
-                <span class="tag">Docker · CI/CD basics</span>
-              </div>
-            </div>
-
-            <div class="card-soft">
-              <h3>Education & languages</h3>
-              <p>
-                MSc Business Analytics, University of Bristol (2025–2026).  
-                BTech Electrical & Electronics Engineering, VIT Bhopal (2018–2022).
-              </p>
-              <div class="tag-cloud">
-                <span class="tag">English · Fluent</span>
-                <span class="tag">Hindi · Fluent</span>
-                <span class="tag">Bengali · Native</span>
-              </div>
-            </div>
-          </section>
-        </aside>
+    <section class="intro">
+      <div class="intro-label">Selected work</div>
+      <h1><span>AI & Analytics portfolio</span></h1>
+      <p>
+        A selection of AI, LLM, and analytics projects delivered for enterprise clients and research
+        partners – from audit automation and compliance engines to text‑to‑SQL and maritime
+        behavioural modelling.
+      </p>
+      <div class="intro-metrics">
+        <span class="metric-pill">3+ years enterprise delivery</span>
+        <span class="metric-pill">£500K+ revenue protected</span>
+        <span class="metric-pill">90–95% LLM ensemble accuracy</span>
       </div>
+    </section>
 
-      <footer>
-        Currently open to AI / LLM Engineer roles in the UK – especially where compliance, audit, or high‑stakes decisions matter.
-      </footer>
-    </div>
+    <main class="projects-grid">
+      <!-- Project 1 -->
+      <a class="project-card" href="/project/ai-audit-validation/">
+        <div class="project-top">
+          <div class="project-title">AI Audit Validation Engine</div>
+          <div class="project-meta">
+            <div>Retail client</div>
+            <div>2024</div>
+          </div>
+        </div>
+        <div class="project-subtitle">Revenue protection & compliance</div>
+        <p class="project-excerpt">
+          Transaction‑level validation engine using Python and LLMs, lifting audit accuracy from
+          60% → 90% and protecting £500K+ in annual revenue.
+        </p>
+        <div class="project-tags">
+          <span class="tag">AI / LLM</span>
+          <span class="tag">Risk & finance</span>
+          <span class="tag">Python</span>
+        </div>
+      </a>
+
+      <!-- Project 2 -->
+      <a class="project-card" href="/project/compliance-reporting-engine/">
+        <div class="project-top">
+          <div class="project-title">Compliance Reporting Engine</div>
+          <div class="project-meta">
+            <div>Retail & fashion</div>
+            <div>2024</div>
+          </div>
+        </div>
+        <div class="project-subtitle">Automated compliance at scale</div>
+        <p class="project-excerpt">
+          Hybrid AI and rule‑based engine increasing compliance reporting accuracy from 40% → 80%
+          across 5,000+ monthly transactions.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Compliance</span>
+          <span class="tag">Anomaly detection</span>
+        </div>
+      </a>
+
+      <!-- Project 3 -->
+      <a class="project-card" href="/project/llm-insight-mining/">
+        <div class="project-top">
+          <div class="project-title">LLM Insight‑Mining Engine</div>
+          <div class="project-meta">
+            <div>Retail analytics</div>
+            <div>2024</div>
+          </div>
+        </div>
+        <div class="project-subtitle">Hypothesis testing in hours</div>
+        <p class="project-excerpt">
+          Multi‑model LLM workflow automating hypothesis testing and narrative generation, reducing
+          analysis cycles from three days to six hours.
+        </p>
+        <div class="project-tags">
+          <span class="tag">LLM</span>
+          <span class="tag">Analytics</span>
+        </div>
+      </a>
+
+      <!-- Project 4 -->
+      <a class="project-card" href="/project/llm-ensemble-sagemaker/">
+        <div class="project-top">
+          <div class="project-title">LLM Ensemble on SageMaker</div>
+          <div class="project-meta">
+            <div>Global client</div>
+            <div>2024</div>
+          </div>
+        </div>
+        <div class="project-subtitle">Production‑grade multi‑model stack</div>
+        <p class="project-excerpt">
+          Ensemble of GPT‑4, Gemini, Claude, and open‑source models with ranking and evaluation
+          pipeline deployed on AWS SageMaker, achieving 90–95% accuracy.
+        </p>
+        <div class="project-tags">
+          <span class="tag">AWS SageMaker</span>
+          <span class="tag">LLM ensemble</span>
+        </div>
+      </a>
+
+      <!-- Project 5 -->
+      <a class="project-card" href="/project/talk-to-data-text-to-sql/">
+        <div class="project-top">
+          <div class="project-title">Talk‑to‑Data Text‑to‑SQL</div>
+          <div class="project-meta">
+            <div>Internal platform</div>
+            <div>2023</div>
+          </div>
+        </div>
+        <div class="project-subtitle">Natural‑language analytics</div>
+        <p class="project-excerpt">
+          FastAPI + LLM backend allowing non‑technical teams to query SQL databases using natural
+          language, returning verified SQL and visual outputs.
+        </p>
+        <div class="project-tags">
+          <span class="tag">FastAPI</span>
+          <span class="tag">LLM</span>
+          <span class="tag">SQL</span>
+        </div>
+      </a>
+
+      <!-- Project 6 -->
+      <a class="project-card" href="/project/hypact-maritime-analytics/">
+        <div class="project-top">
+          <div class="project-title">HyPACT 2.0 Maritime Analytics</div>
+          <div class="project-meta">
+            <div>Research</div>
+            <div>2025</div>
+          </div>
+        </div>
+        <div class="project-subtitle">Behavioural modelling at sea</div>
+        <p class="project-excerpt">
+          Maritime behavioural modelling using Random Forest, XGBoost, and ensembles for
+          scenario analysis and decision support in research contexts.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Research</span>
+          <span class="tag">Ensembles</span>
+        </div>
+      </a>
+    </main>
+
+    <footer>
+      Currently pursuing MSc Business Analytics at the University of Bristol &middot;
+      Open to AI / LLM Engineer roles in the UK.
+    </footer>
   </div>
 </body>
 </html>
