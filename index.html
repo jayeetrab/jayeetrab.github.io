@@ -2,169 +2,224 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jayeetra Bhattacharjee</title>
+  <title>Jayeetra Bhattacharjee · AI Engineer & Business Analytics</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Jayeetra Bhattacharjee">
+  <meta name="description" content="AI/ML Engineer and Business Analytics MSc student building high-impact AI, LLM, and analytics solutions for enterprises.">
   <style>
     :root {
-      --bg: #050816;
-      --card: #0f172a;
-      --accent: #22d3ee;
-      --accent-soft: rgba(34,211,238,0.1);
+      --bg: #020617;
+      --bg-elevated: #020617;
+      --panel: rgba(15,23,42,0.92);
+      --border-subtle: rgba(51,65,85,0.85);
+      --border-strong: rgba(148,163,184,0.6);
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.15);
+      --accent-2: #a855f7;
+      --accent-3: #22c55e;
       --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
+      --text-soft: #9ca3af;
+      --text-faint: #6b7280;
+      --shadow-strong: 0 24px 80px rgba(15,23,42,1);
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-pill: 999px;
+      --blur: 18px;
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1e293b 0, #020617 45%, #000 100%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, #0b1120 0, #000 55%) fixed,
+        radial-gradient(circle at bottom right, #020617 0, #000 60%) fixed;
       color: var(--text-main);
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px 16px;
+      padding: 20px 16px 32px;
+      -webkit-font-smoothing: antialiased;
     }
-    .shell {
-      width: 100%;
-      max-width: 960px;
-      background: radial-gradient(circle at top left, #0b1120 0, #020617 55%, #000 100%);
-      border-radius: 24px;
-      border: 1px solid rgba(148,163,184,0.35);
+
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.18), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(147,51,234,0.12), transparent 60%),
+        linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.96));
+      border: 1px solid rgba(148,163,184,0.55);
       box-shadow:
-        0 24px 80px rgba(15,23,42,0.95),
-        0 0 0 1px rgba(15,23,42,0.75);
-      padding: 28px 26px 30px;
+        var(--shadow-strong),
+        0 0 0 1px rgba(30,64,175,0.25);
+      padding: 18px 18px 24px;
       position: relative;
       overflow: hidden;
     }
-    .shell::before {
+
+    .page-shell::before {
       content: "";
       position: absolute;
       inset: -40%;
       background:
-        radial-gradient(circle at top, rgba(56,189,248,0.16), transparent 60%),
-        radial-gradient(circle at bottom right, rgba(167,139,250,0.14), transparent 55%);
-      opacity: 0.7;
+        radial-gradient(circle at 10% 0%, rgba(59,130,246,0.2), transparent 55%),
+        radial-gradient(circle at 90% 20%, rgba(56,189,248,0.16), transparent 55%);
+      opacity: 0.65;
       pointer-events: none;
     }
-    .frame {
+
+    .page-inner {
       position: relative;
       z-index: 1;
     }
+
     header {
       display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
+      gap: 18px;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
     }
-    .name-title {
+
+    .identity {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 6px;
+      max-width: 640px;
     }
-    .pill {
+
+    .role-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 4px 10px;
-      border-radius: 999px;
+      border-radius: var(--radius-pill);
       border: 1px solid rgba(148,163,184,0.55);
-      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.65));
-      font-size: 12px;
-      letter-spacing: 0.04em;
+      background: radial-gradient(circle at top left, rgba(15,23,42,0.95), rgba(15,23,42,0.85));
+      color: var(--text-soft);
+      font-size: 11px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--text-muted);
     }
-    .pill-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #22c55e, #4ade80);
-      box-shadow: 0 0 0 4px rgba(34,197,94,0.28);
+
+    .role-indicator {
+      width: 9px;
+      height: 9px;
+      border-radius: var(--radius-pill);
+      background: radial-gradient(circle at 35% 30%, #22c55e, #4ade80);
+      box-shadow: 0 0 0 4px rgba(22,163,74,0.3);
     }
+
     h1 {
-      font-size: clamp(26px, 4vw, 30px);
-      letter-spacing: 0.03em;
+      font-size: clamp(26px, 4vw, 32px);
+      letter-spacing: 0.02em;
+      line-height: 1.15;
     }
+
     h1 span {
-      background: linear-gradient(120deg, #e5e7eb, #38bdf8, #a855f7);
+      background: linear-gradient(110deg, #e5e7eb, #38bdf8, #a855f7);
       -webkit-background-clip: text;
       color: transparent;
     }
-    .subtitle {
+
+    .headline {
       font-size: 14px;
-      color: var(--text-muted);
+      color: var(--text-soft);
     }
-    .links {
+
+    .headline strong {
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-end;
+      flex: 1;
+      min-width: 230px;
+    }
+
+    .contact-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-    }
-    .btn {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
       gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.55);
-      color: var(--text-main);
+      justify-content: flex-end;
       font-size: 13px;
-      text-decoration: none;
-      background: radial-gradient(circle at top left, rgba(148,163,184,0.28), rgba(15,23,42,0.96));
-      overflow: hidden;
+      color: var(--text-soft);
     }
-    .btn::after {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background: linear-gradient(120deg, rgba(56,189,248,0.22), rgba(139,92,246,0.22));
-      opacity: 0;
-      transition: opacity 0.25s ease-out;
-    }
-    .btn span {
-      position: relative;
-      z-index: 1;
-    }
-    .btn:hover::after {
-      opacity: 1;
-    }
-    .btn-icon {
+
+    .contact-row span {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #38bdf8;
+    }
+
+    .chip-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 11px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148,163,184,0.55);
+      background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(15,23,42,0.78));
+      color: var(--text-main);
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .chip-link-icon {
       width: 18px;
       height: 18px;
       border-radius: 999px;
-      background: rgba(15,23,42,0.9);
       border: 1px solid rgba(148,163,184,0.7);
-      font-size: 11px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      background: rgba(15,23,42,0.95);
     }
-    main {
+
+    .layout {
       display: grid;
-      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.7fr);
-      gap: 22px;
+      grid-template-columns: minmax(0, 2.15fr) minmax(0, 1.85fr);
+      gap: 16px;
     }
-    @media (max-width: 720px) {
-      main {
+
+    @media (max-width: 840px) {
+      header {
+        align-items: flex-start;
+      }
+      .contact {
+        align-items: flex-start;
+      }
+      .contact-row {
+        justify-content: flex-start;
+      }
+      .layout {
         grid-template-columns: minmax(0, 1fr);
       }
     }
-    section {
-      border-radius: 18px;
-      border: 1px solid rgba(148,163,184,0.5);
-      background: linear-gradient(145deg, rgba(15,23,42,0.96), rgba(15,23,42,0.78));
-      padding: 16px 16px 18px;
+
+    main section {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      background:
+        radial-gradient(circle at top left, rgba(15,23,42,0.95), rgba(15,23,42,0.92));
       box-shadow:
-        0 14px 40px rgba(15,23,42,0.9),
-        inset 0 0 0 1px rgba(15,23,42,0.8);
+        0 16px 50px rgba(15,23,42,0.95),
+        inset 0 0 0 1px rgba(15,23,42,0.9);
+      padding: 16px 16px 18px;
     }
-    section + section {
-      margin-top: 0;
-    }
+
     .section-label {
       font-size: 11px;
       letter-spacing: 0.18em;
@@ -172,176 +227,483 @@
       color: var(--accent);
       margin-bottom: 6px;
     }
+
     h2 {
       font-size: 16px;
       margin-bottom: 10px;
     }
+
     p {
       font-size: 13px;
       line-height: 1.6;
-      color: var(--text-muted);
+      color: var(--text-soft);
       margin-bottom: 10px;
     }
-    ul {
-      list-style: none;
-      margin-top: 4px;
-    }
-    li {
-      font-size: 13px;
-      color: var(--text-main);
-      margin-bottom: 6px;
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-    }
-    .pill-tag {
-      display: inline-flex;
-      align-items: center;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.95);
-      border: 1px solid rgba(148,163,184,0.55);
-      font-size: 11px;
-      color: var(--text-muted);
-      white-space: nowrap;
-    }
-    .stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-    }
-    .status-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      margin-right: 6px;
-      background: radial-gradient(circle at 35% 35%, #f97316, #ea580c);
-      box-shadow: 0 0 0 4px rgba(248,113,113,0.2);
-    }
-    .footer-note {
-      margin-top: 18px;
-      font-size: 11px;
-      text-align: right;
-      color: var(--text-muted);
-      opacity: 0.7;
-    }
-    .accent-chip {
+
+    .highlight-metric {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       padding: 3px 9px;
-      border-radius: 999px;
+      border-radius: var(--radius-pill);
       background: var(--accent-soft);
       border: 1px solid rgba(45,212,191,0.45);
       color: #a5f3fc;
       font-size: 11px;
-      margin-left: 6px;
+      margin-right: 6px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .small-badge {
+      padding: 2px 7px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148,163,184,0.55);
+      background: rgba(15,23,42,0.98);
+      font-size: 11px;
+      color: var(--text-faint);
+    }
+
+    .timeline {
+      margin-top: 4px;
+    }
+
+    .timeline-item {
+      padding: 10px 0;
+      border-top: 1px solid rgba(30,41,59,0.9);
+    }
+
+    .timeline-item:first-of-type {
+      border-top: none;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .timeline-title {
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    .timeline-meta {
+      font-size: 11px;
+      color: var(--text-soft);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .timeline-body {
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .bullet {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 4px;
+      align-items: flex-start;
+    }
+
+    .bullet-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      margin-top: 7px;
+      background: rgba(148,163,184,0.9);
+    }
+
+    .bullet-text {
+      flex: 1;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 640px) {
+      .grid-two {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card-soft {
+      padding: 10px 10px 11px;
+      border-radius: 14px;
+      border: 1px solid rgba(30,64,175,0.45);
+      background: radial-gradient(circle at top, rgba(15,23,42,0.98), rgba(15,23,42,0.94));
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .card-soft h3 {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .tag {
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.55);
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      border: 1px dashed rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.96);
+    }
+
+    .status-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #f97316, #ea580c);
+      box-shadow: 0 0 0 4px rgba(248,113,113,0.25);
+    }
+
+    footer {
+      margin-top: 14px;
+      font-size: 11px;
+      text-align: right;
+      color: var(--text-faint);
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="shell">
-    <div class="frame">
+  <div class="page-shell">
+    <div class="page-inner">
       <header>
-        <div class="name-title">
-          <div class="pill">
-            <span class="pill-dot"></span>
-            <span>Business analytics · Engineering hospitality</span>
+        <div class="identity">
+          <div class="role-pill">
+            <span class="role-indicator"></span>
+            <span>AI · LLMs · Analytics · Platforms</span>
           </div>
           <h1><span>Jayeetra Bhattacharjee</span></h1>
-          <p class="subtitle">Business Analytics @ University of Bristol · Full‑stack developer · Hospitality tech enthusiast</p>
+          <p class="headline">
+            AI/ML Engineer & MSc Business Analytics, specialising in enterprise‑scale LLM systems, audit & compliance automation,
+            and decision intelligence for retail, fashion, and electronics.
+          </p>
         </div>
-        <div class="links">
-          <a class="btn" href="https://github.com/jayeetrab" target="_blank" rel="noopener">
-            <span class="btn-icon">GH</span>
-            <span>GitHub</span>
-          </a>
-          <a class="btn" href="mailto:you@example.com">
-            <span class="btn-icon">@</span>
-            <span>Email</span>
-          </a>
-          <a class="btn" href="#projects">
-            <span class="btn-icon">★</span>
-            <span>Featured work</span>
-          </a>
+        <div class="contact">
+          <div class="contact-row">
+            <span><span class="dot"></span> Bristol, United Kingdom</span>
+          </div>
+          <div class="contact-row">
+            <span>📧 <a href="mailto:jayeetra.uk@gmail.com">jayeetra.uk@gmail.com</a></span>
+            <span>📱 <a href="tel:+4407438153933">+44 07438 153933</a></span>
+          </div>
+          <div class="contact-row">
+            <a class="chip-link" href="https://www.linkedin.com" target="_blank" rel="noopener">
+              <span class="chip-link-icon">in</span>
+              <span>LinkedIn</span>
+            </a>
+            <a class="chip-link" href="https://github.com/jayeetrab" target="_blank" rel="noopener">
+              <span class="chip-link-icon">GH</span>
+              <span>GitHub</span>
+            </a>
+            <a class="chip-link" href="#projects">
+              <span class="chip-link-icon">★</span>
+              <span>Project console</span>
+            </a>
+          </div>
         </div>
       </header>
 
-      <main>
-        <section>
-          <div class="section-label">About</div>
-          <h2>Turning data, software and hospitality into products</h2>
-          <p>
-            I build end‑to‑end products that connect people with places – from restaurant discovery and dating experiences to hotel
-            operations tools. My background combines hands‑on hospitality work with analytical and engineering skills.
-          </p>
-          <p>
-            Recently I’ve been focusing on delightful user experiences, analytics‑driven decisions, and practical AI integrations
-            that actually ship.
-          </p>
+      <div class="layout">
+        <main>
+          <section>
+            <div class="section-label">Profile signal</div>
+            <h2>Consulting‑minded AI engineer for complex organisations</h2>
+            <p>
+              I design and deploy AI and LLM systems that improve decision‑making, protect revenue, and automate complex workflows
+              for large enterprises. My work blends product thinking, robust engineering, and a strong analytics foundation.
+            </p>
+            <p>
+              Recent outcomes include faster analytical cycles, higher audit and compliance accuracy, and seven‑figure revenue
+              protection for global retail and fashion brands.
+            </p>
 
-          <div class="section-label" style="margin-top:14px;">Current focus</div>
-          <ul>
-            <li>
-              <span>TwoTable – restaurant‑first dating app</span>
-              <span class="pill-tag">Product & full‑stack</span>
-            </li>
-            <li>
-              <span>Hotel management tooling at Radisson Blu</span>
-              <span class="pill-tag">Ops & engineering</span>
-            </li>
-            <li>
-              <span>Business Analytics MSc · University of Bristol</span>
-              <span class="pill-tag">Data & ML</span>
-            </li>
-          </ul>
-        </section>
+            <div class="badge-row">
+              <span class="highlight-metric">3+ yrs enterprise AI delivery</span>
+              <span class="highlight-metric">90–95% LLM ensemble accuracy</span>
+              <span class="highlight-metric">£500K+ revenue protected yearly</span>
+            </div>
+          </section>
 
-        <section id="projects">
-          <div class="section-label">Selected projects</div>
-          <h2>Things I’m building right now</h2>
-          <ul>
-            <li>
-              <span>
-                <span class="status-dot"></span>
-                TwoTable – restaurant discovery dating platform
-              </span>
-            </li>
-            <li>
-              <span>
-                <span class="status-dot"></span>
-                Hotel management system (front‑office workflow + dashboards)
-              </span>
-            </li>
-            <li>
-              <span>
-                <span class="status-dot"></span>
-                Analytics and AI experiments for hospitality operations
-              </span>
-            </li>
-          </ul>
+          <section id="experience">
+            <div class="section-label">Experience feed</div>
+            <h2>Where I’ve been building</h2>
 
-          <div class="section-label" style="margin-top:14px;">Tech stack</div>
-          <div class="stack">
-            <span class="pill-tag">Python · FastAPI</span>
-            <span class="pill-tag">JavaScript · React</span>
-            <span class="pill-tag">Streamlit</span>
-            <span class="pill-tag">PostgreSQL · MongoDB</span>
-            <span class="pill-tag">Flutter (learning)</span>
-            <span class="pill-tag">AWS · Cloud deployment</span>
-          </div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <div class="timeline-title">AI/ML Engineer · Tata Consultancy Services</div>
+                  <div class="timeline-meta">Kolkata · Jan 2024 – Sep 2025</div>
+                </div>
+                <div class="timeline-body">
+                  <ul>
+                    <li class="bullet">
+                      <span class="bullet-dot"></span>
+                      <span class="bullet-text">
+                        Delivered analytics and LLM solutions that improved decision‑making speed by 25%, cut manual effort by 30%, and
+                        raised audit accuracy from 60% → 90%.
+                      </span>
+                    </li>
+                    <li class="bullet">
+                      <span class="bullet-dot"></span>
+                      <span class="bullet-text">
+                        Built AI‑powered audit and compliance engines covering 5,000+ monthly transactions, increasing reporting
+                        accuracy from 40% → 80% and preventing £500K+ annual revenue leakage.
+                      </span>
+                    </li>
+                    <li class="bullet">
+                      <span class="bullet-dot"></span>
+                      <span class="bullet-text">
+                        Designed and deployed a multi‑model LLM ensemble (GPT‑4, Gemini, Claude, Hugging Face) via AWS SageMaker,
+                        achieving 90–95% accuracy in production.
+                      </span>
+                    </li>
+                    <li class="bullet">
+                      <span class="bullet-dot"></span>
+                      <span class="bullet-text">
+                        Created an LLM insight‑mining engine that automated hypothesis testing, reducing analysis cycles from 3 days → 6 hours
+                        and driving adoption via tailored dashboards.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-          <p style="margin-top:14px;">
-            Open to collaborations on hospitality tech, data products, and AI‑powered tools
-            <span class="accent-chip">Available for interesting problems</span>
-          </p>
-        </section>
-      </main>
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <div class="timeline-title">Java Developer · Tata Consultancy Services</div>
+                  <div class="timeline-meta">Kolkata · Jul 2022 – Dec 2023</div>
+                </div>
+                <div class="timeline-body">
+                  <ul>
+                    <li class="bullet">
+                      <span class="bullet-dot"></span>
+                      <span class="bullet-text">
+                        Engineered microservice‑driven platforms processing 100K+ daily transactions, supporting enterprise‑scale digital transformation.
+                      </span>
+                    </li>
+                    <li class="bullet">
+                      <span class="bullet-dot"></span>
+                      <span class="bullet-text">
+                        Integrated Hybris, Juspay, and OMS systems across the order and payment lifecycle for 1M+ annual orders with secure
+                        payment flows worth £2M+ annually.
+                      </span>
+                    </li>
+                    <li class="bullet">
+                      <span class="bullet-dot"></span>
+                      <span class="bullet-text">
+                        Optimised APIs and SQL reporting, reducing critical data‑retrieval times by 25%.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-      <div class="footer-note">
-        Deployed with GitHub Pages · Pointed to <code>jayeetra-bhattacharjee.co.uk</code>
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <div class="timeline-title">Research Assistant · University of Bristol</div>
+                  <div class="timeline-meta">Oct 2025 – Present · Part‑time</div>
+                </div>
+                <div class="timeline-body">
+                  <ul>
+                    <li class="bullet">
+                      <span class="bullet-dot"></span>
+                      <span class="bullet-text">
+                        Supporting Random Forest, XGBoost, and ensemble models for maritime behavioural prediction, with dashboards and reports
+                        for decision support in HyPACT 2.0 analytics.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <div class="timeline-title">Research Support Assistant · University of Bristol</div>
+                  <div class="timeline-meta">Oct 2025 – Nov 2025 · Part‑time</div>
+                </div>
+                <div class="timeline-body">
+                  <ul>
+                    <li class="bullet">
+                      <span class="bullet-dot"></span>
+                      <span class="bullet-text">
+                        Contributed to urban planning analytics with Dr. Cheng by preparing GIS datasets and validating LLM‑generated planning
+                        insights against ground data.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <aside>
+          <section>
+            <div class="section-label">Live systems</div>
+            <h2 id="projects">Highlighted projects & research</h2>
+            <div class="grid-two">
+              <div class="card-soft">
+                <h3>AI‑Powered Audit Validation</h3>
+                <p>
+                  Transaction‑level validation engine for a retail client using Python and LLMs, lifting audit accuracy from 60% → 90% and
+                  safeguarding over £500K per year.
+                </p>
+              </div>
+              <div class="card-soft">
+                <h3>Compliance Reporting Engine</h3>
+                <p>
+                  AI + rule‑based compliance system that improved reporting accuracy from 40% → 80% across 5,000+ monthly transactions
+                  via automated checks and anomaly detection.
+                </p>
+              </div>
+              <div class="card-soft">
+                <h3>LLM Insight‑Mining Engine</h3>
+                <p>
+                  Multi‑model LLM engine that automates hypothesis testing and narrative generation, compressing three days of analysis
+                  into six hours of guided exploration.
+                </p>
+              </div>
+              <div class="card-soft">
+                <h3>LLM Ensemble on SageMaker</h3>
+                <p>
+                  Production‑grade ensemble combining GPT‑4, Gemini, Claude, and open‑source models, orchestrated and ranked on AWS
+                  SageMaker to reach 90–95% accuracy.
+                </p>
+              </div>
+              <div class="card-soft">
+                <h3>Talk‑to‑Data (Text‑to‑SQL)</h3>
+                <p>
+                  FastAPI + LLM backend that lets non‑technical teams query SQL databases in natural language, returning verified SQL and
+                  visual insights.
+                </p>
+              </div>
+              <div class="card-soft">
+                <h3>POS Revenue Protection</h3>
+                <p>
+                  Automated POS validation for a jewellery brand, boosting accuracy from 60% → 90% and preventing recurring revenue
+                  leakage at scale.
+                </p>
+              </div>
+            </div>
+
+            <div class="status-row">
+              <div class="status-pill">
+                <span class="status-indicator"></span>
+                <span>Exploring: AI for compliance, audit, and operational decision‑making in UK enterprises.</span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-label">Skills console</div>
+            <h2>What I ship with</h2>
+
+            <div class="card-soft" style="margin-bottom:8px;">
+              <h3>Core stack</h3>
+              <div class="tag-cloud">
+                <span class="tag">Python · pandas · NumPy · scikit‑learn</span>
+                <span class="tag">LLMs · Hugging Face · OpenAI · Gemini</span>
+                <span class="tag">NLP · spaCy · Transformers</span>
+                <span class="tag">Java · Spring Boot · Microservices</span>
+                <span class="tag">SQL · REST APIs</span>
+              </div>
+            </div>
+
+            <div class="card-soft" style="margin-bottom:8px;">
+              <h3>Data & platforms</h3>
+              <div class="tag-cloud">
+                <span class="tag">AWS · SageMaker</span>
+                <span class="tag">Chroma DB</span>
+                <span class="tag">Relational & NoSQL databases</span>
+                <span class="tag">ETL pipelines</span>
+                <span class="tag">Cloud ML pipelines</span>
+              </div>
+            </div>
+
+            <div class="card-soft" style="margin-bottom:8px;">
+              <h3>Analytics & delivery</h3>
+              <div class="tag-cloud">
+                <span class="tag">Predictive analytics</span>
+                <span class="tag">Text‑to‑SQL</span>
+                <span class="tag">Matplotlib · Seaborn</span>
+                <span class="tag">Workflow automation</span>
+                <span class="tag">Docker · CI/CD basics</span>
+              </div>
+            </div>
+
+            <div class="card-soft">
+              <h3>Education & languages</h3>
+              <p>
+                MSc Business Analytics, University of Bristol (2025–2026).  
+                BTech Electrical & Electronics Engineering, VIT Bhopal (2018–2022).
+              </p>
+              <div class="tag-cloud">
+                <span class="tag">English · Fluent</span>
+                <span class="tag">Hindi · Fluent</span>
+                <span class="tag">Bengali · Native</span>
+              </div>
+            </div>
+          </section>
+        </aside>
       </div>
+
+      <footer>
+        Currently open to AI / LLM Engineer roles in the UK – especially where compliance, audit, or high‑stakes decisions matter.
+      </footer>
     </div>
   </div>
 </body>
