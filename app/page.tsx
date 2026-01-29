@@ -1,15 +1,8 @@
 "use client";
 
-import type { Metadata } from "next";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { projects } from "@/lib/projects";
-
-export const metadata: Metadata = {
-  title: "Jayeetra Bhattacharjee – AI/ML Engineer & Business Analytics",
-  description:
-    "AI/ML Engineer delivering LLM, NLP, and automation solutions for global enterprises.",
-};
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -77,7 +70,6 @@ export default function Home() {
           </div>
         </motion.header>
 
-        {/* Divider */}
         <div className="my-10 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
         {/* Summary */}
@@ -104,7 +96,6 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Snapshot cards */}
           <motion.div
             className="grid gap-4 text-sm sm:grid-cols-2 md:grid-cols-1"
             {...fadeUp(0.12)}
@@ -159,7 +150,6 @@ export default function Home() {
             Experience
           </h2>
           <div className="mt-5 space-y-8">
-            {/* TCS AI/ML Engineer */}
             <article className="rounded-2xl border border-white/5 bg-[var(--bg-elevated)]/90 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.7)]">
               <header className="flex flex-col justify-between gap-1 md:flex-row md:items-baseline">
                 <div>
@@ -211,7 +201,6 @@ export default function Home() {
               </ul>
             </article>
 
-            {/* TCS Java Developer */}
             <article className="rounded-2xl border border-white/5 bg-[var(--bg-elevated)]/90 p-5">
               <header className="flex flex-col justify-between gap-1 md:flex-row md:items-baseline">
                 <div>
@@ -247,7 +236,6 @@ export default function Home() {
               </ul>
             </article>
 
-            {/* Research Roles */}
             <article className="rounded-2xl border border-white/5 bg-[var(--bg-elevated)]/90 p-5">
               <header className="flex flex-col justify-between gap-1 md:flex-row md:items-baseline">
                 <div>
@@ -357,7 +345,6 @@ export default function Home() {
           className="mt-12 grid gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]"
           {...fadeUp(0.12)}
         >
-          {/* Skills */}
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-400">
               Skills
@@ -415,7 +402,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Education */}
           <div id="education">
             <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-400">
               Education
@@ -446,7 +432,6 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* Footer */}
         <footer className="mt-12 border-t border-white/5 pt-6 text-[0.75rem] text-neutral-500">
           <p>
             Open to AI Engineer, Machine Learning Engineer, and Applied
