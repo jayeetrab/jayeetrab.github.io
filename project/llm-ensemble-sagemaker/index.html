@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AI Audit Validation Engine · Jayeetra Bhattacharjee</title>
+  <title>LLM Ensemble on SageMaker · Jayeetra Bhattacharjee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="AI audit validation engine using Python and LLMs, improving audit accuracy from 60% to 90% and protecting £500K+ annual revenue.">
+  <meta name="description" content="Production-grade LLM ensemble deployed on AWS SageMaker, achieving 90-95% accuracy across multiple models.">
   <style>
     :root {
       --bg: #020617;
@@ -165,17 +165,17 @@
 
     <main>
       <section class="hero">
-        <p class="category">AI · Compliance · Retail</p>
-        <h1>AI‑Powered Audit Validation Engine</h1>
+        <p class="category">LLM · Ensemble · AWS SageMaker</p>
+        <h1>LLM Ensemble on SageMaker</h1>
         <div class="meta-line">
-          <span>Client: Global retail brand</span>
+          <span>Client: Global enterprise</span>
           <span>Year: 2024</span>
-          <span>Role: AI/ML Engineer</span>
+          <span>Role: ML Engineer</span>
         </div>
         <p class="subtitle">
-          Transaction‑level validation engine built with Python and LLMs, improving audit accuracy
-          from 60% → 90% and preventing more than £500K in annual revenue leakage by automatically
-          flagging inconsistencies and risks.
+          Production‑grade ensemble combining GPT‑4, Gemini, Claude, and open‑source models with ranking
+          and evaluation pipeline deployed on AWS SageMaker, achieving 90–95% accuracy and maintaining
+          operational reliability for enterprise use.
         </p>
       </section>
 
@@ -183,33 +183,31 @@
         <section>
           <h2 class="section-title">Context</h2>
           <p>
-            The client managed thousands of daily transactions across multiple channels, with manual
-            sampling and spreadsheet‑based checks leading to missed anomalies, slow audit cycles, and
-            recurring revenue leakage. Audit teams needed automated flagging of suspicious patterns,
-            inconsistent data, and non‑compliant records without proportionally increasing headcount.
+            Relying on a single LLM introduces risk: model-specific failures, hallucinations, and drift.
+            The client needed a production system that combined multiple LLM strengths, evaluated outputs
+            in real‑time, and surfaced only the most reliable predictions for critical business decisions.
           </p>
 
           <h2 class="section-title">Approach</h2>
           <p>
-            I designed an AI‑driven validation engine combining deterministic checks with LLM‑based
-            reasoning. Each transaction is enriched with metadata, evaluated against rule libraries
-            capturing hard constraints (formats, ranges, mandatory fields), then passed through LLM
-            prompts that assess descriptions, amounts, and patterns for inconsistencies and violations.
+            I designed a multi‑model ensemble architecture deployed on AWS SageMaker that ingests requests,
+            routes them in parallel to multiple LLM endpoints, aggregates outputs using learned ranking,
+            and returns the consensus prediction with confidence scores.
           </p>
           <ul>
-            <li>Ingested POS and order data into a structured Python‑based validation pipeline.</li>
-            <li>Implemented rule‑based checks for hard constraints and data quality gates.</li>
-            <li>Used LLMs (GPT‑4, Gemini) to analyse free‑text descriptions and contextual anomalies.</li>
-            <li>Prioritised and labelled issues to focus human reviewers on highest‑risk items.</li>
-            <li>Delivered dashboards showing flagged transactions, severity scores, and recommendations.</li>
+            <li>Set up SageMaker inference endpoints for GPT‑4, Gemini, Claude, and Hugging Face models.</li>
+            <li>Implemented parallel request routing with timeout handling for fault tolerance.</li>
+            <li>Developed a ranking model (gradient boosting) to weight each model's predictions based on calibration.</li>
+            <li>Added real‑time evaluation metrics and model drift detection.</li>
+            <li>Built logging and monitoring dashboards for operational oversight.</li>
           </ul>
 
           <h2 class="section-title" style="margin-top:10px;">Impact</h2>
           <ul class="impact-list">
-            <li>Audit accuracy improved from 60% → 90% on historical test sets.</li>
-            <li>Estimated £500K+ in yearly revenue protected by catching leakage earlier in the flow.</li>
-            <li>Manual review effort reduced by ~30% through intelligent prioritisation.</li>
-            <li>Audit and finance teams gained explainable, actionable insights for each flagged transaction.</li>
+            <li>Ensemble accuracy reached 90–95%, outperforming individual models by 5–10%.</li>
+            <li>System confidence scores correlated well with actual accuracy, enabling safe filtering.</li>
+            <li>Reduced hallucination rate by ~40% through consensus and ranking.</li>
+            <li>Operational uptime: 99.8% despite individual model downtime (SageMaker auto‑failover).</li>
           </ul>
         </section>
 
@@ -217,29 +215,28 @@
           <div class="side-block">
             <h2>Responsibilities</h2>
             <p>
-              End‑to‑end design and implementation of the validation engine: data modelling, rule library
-              development, LLM prompt engineering, backend pipeline, dashboard design, and stakeholder handover.
+              End‑to‑end deployment: SageMaker setup, model endpoint configuration, ensemble architecture,
+              ranking model development, monitoring pipelines, and production support.
             </p>
           </div>
 
           <div class="side-block">
             <h2>Technologies</h2>
             <div class="tag-cloud">
+              <span class="tag">AWS SageMaker</span>
+              <span class="tag">GPT‑4 / Gemini / Claude</span>
               <span class="tag">Python</span>
-              <span class="tag">LLMs (GPT‑4, Gemini)</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">SQL</span>
-              <span class="tag">Dashboards</span>
-              <span class="tag">AWS</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">CloudWatch</span>
+              <span class="tag">Docker</span>
             </div>
           </div>
 
           <div class="side-block">
             <h2>What this illustrates</h2>
             <p>
-              How to combine classical validation logic with LLM reasoning to create practical systems
-              that fit into existing workflows and deliver measurable business impact (revenue protection,
-              operational efficiency).
+              How to architect production LLM systems that balance accuracy, reliability, and scalability
+              by combining multiple models and leveraging cloud infrastructure for operational resilience.
             </p>
           </div>
         </aside>
@@ -251,7 +248,7 @@
     </main>
 
     <footer>
-      Interested in similar compliance or audit systems? Contact: <a href="mailto:jayeetra.uk@gmail.com">jayeetra.uk@gmail.com</a>
+      Interested in production LLM systems? Contact: <a href="mailto:jayeetra.uk@gmail.com">jayeetra.uk@gmail.com</a>
     </footer>
   </div>
 </body>
