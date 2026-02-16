@@ -2,26 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Jayeetra Bhattacharjee – AI/ML Engineer</title>
+  <title>Jayeetra · AI Systems Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      --bg: #ffffff;
-      --bg-alt: #f5f5f7;
-      --bg-elevated: #ffffff;
+      --bg: #f5f5f7;
+      --bg-page: #f9fafb;
+      --bg-card: #ffffff;
       --border-subtle: #e5e7eb;
+      --border-strong: #d4d4d8;
       --accent: #0f766e;
       --accent-soft: rgba(15, 118, 110, 0.08);
-      --accent-strong: rgba(15, 118, 110, 0.14);
+      --accent-strong: rgba(15, 118, 110, 0.16);
       --text-main: #020617;
       --text-soft: #4b5563;
       --text-softer: #9ca3af;
       --radius-lg: 18px;
       --radius-xl: 26px;
-      --shadow-soft: 0 22px 40px rgba(15, 23, 42, 0.09);
-      --shadow-hover: 0 28px 60px rgba(15, 23, 42, 0.12);
+      --shadow-soft: 0 18px 50px rgba(15, 23, 42, 0.08);
+      --shadow-strong: 0 28px 80px rgba(15, 23, 42, 0.14);
       --transition-fast: 220ms cubic-bezier(0.3, 0.6, 0.3, 1);
-      --transition-med: 380ms cubic-bezier(0.22, 1, 0.36, 1);
+      --transition-med: 420ms cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     * {
@@ -43,19 +44,20 @@
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: 32px 16px 40px;
+      padding: 28px 16px 40px;
     }
 
     .shell {
       width: 100%;
-      max-width: 1100px;
-      background: linear-gradient(180deg, #ffffff, #f9fafb);
+      max-width: 1180px;
       border-radius: 34px;
+      background:
+        linear-gradient(180deg, #ffffff, #f9fafb 50%, #f5f5f7 100%);
       border: 1px solid rgba(209, 213, 219, 0.9);
       box-shadow:
-        0 0 0 1px rgba(148, 163, 184, 0.2),
-        0 30px 90px rgba(15, 23, 42, 0.15);
-      padding: 22px 26px 24px;
+        0 0 0 1px rgba(148, 163, 184, 0.18),
+        0 30px 90px rgba(15, 23, 42, 0.12);
+      padding: 18px 26px 24px;
       position: relative;
       overflow: hidden;
       isolation: isolate;
@@ -67,39 +69,38 @@
       inset: -60px -80px auto;
       height: 210px;
       background:
-        radial-gradient(circle at 0 0, rgba(15, 118, 110, 0.11), transparent 55%),
-        radial-gradient(circle at 60% -40%, rgba(45, 212, 191, 0.16), transparent 55%);
-      opacity: 0.7;
+        radial-gradient(circle at 0 0, rgba(15, 118, 110, 0.15), transparent 55%),
+        radial-gradient(circle at 80% -40%, rgba(45, 212, 191, 0.18), transparent 55%);
+      opacity: 0.75;
       pointer-events: none;
       z-index: -1;
     }
 
-    /* Very subtle floating blobs for “alive” feel */
     .orb {
       position: absolute;
-      width: 180px;
-      height: 180px;
+      width: 190px;
+      height: 190px;
       border-radius: 999px;
       background: radial-gradient(circle, rgba(15, 118, 110, 0.12), transparent 70%);
-      filter: blur(24px);
+      filter: blur(26px);
       opacity: 0.7;
       mix-blend-mode: soft-light;
       pointer-events: none;
       animation: orb-float 26s ease-in-out infinite alternate;
       z-index: -2;
     }
-    .orb.orb-1 { top: 10%; right: -4%; animation-delay: -6s; }
+    .orb.orb-1 { top: 12%; right: -6%; animation-delay: -6s; }
     .orb.orb-2 {
-      bottom: -12%;
-      left: -4%;
-      background: radial-gradient(circle, rgba(45, 212, 191, 0.12), transparent 70%);
+      bottom: -16%;
+      left: -6%;
+      background: radial-gradient(circle, rgba(45, 212, 191, 0.14), transparent 70%);
       animation-duration: 30s;
     }
 
     @keyframes orb-float {
       0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.55; }
-      50% { transform: translate3d(12px, -14px, 0) scale(1.05); opacity: 0.82; }
-      100% { transform: translate3d(-10px, 18px, 0) scale(1.03); opacity: 0.5; }
+      50% { transform: translate3d(14px, -14px, 0) scale(1.05); opacity: 0.85; }
+      100% { transform: translate3d(-12px, 18px, 0) scale(1.03); opacity: 0.5; }
     }
 
     header {
@@ -107,7 +108,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 18px;
-      padding: 6px 4px 14px;
+      padding: 4px 2px 12px;
       border-bottom: 1px solid rgba(229, 231, 235, 0.9);
       position: sticky;
       top: 0;
@@ -122,15 +123,15 @@
       z-index: 10;
     }
 
-    .id-block {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
-    .avatar-shell {
-      width: 40px;
-      height: 40px;
+    .brand-mark {
+      width: 34px;
+      height: 34px;
       border-radius: 14px;
       background:
         linear-gradient(135deg, #ecfeff, #f0fdf4);
@@ -138,33 +139,33 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.18);
+      box-shadow: 0 10px 18px rgba(15, 23, 42, 0.18);
     }
 
-    .avatar-initials {
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
+    .brand-mark span {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
       color: #0f172a;
     }
 
-    .id-meta {
+    .brand-meta {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 1px;
     }
 
-    .name {
-      font-size: 15px;
+    .brand-name {
+      font-size: 14px;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
     }
 
-    .role {
-      font-size: 12px;
+    .brand-sub {
+      font-size: 11px;
       color: var(--text-soft);
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
     }
 
@@ -177,7 +178,7 @@
     }
 
     nav a {
-      padding: 6px 10px;
+      padding: 6px 11px;
       border-radius: 999px;
       text-decoration: none;
       color: var(--text-soft);
@@ -195,10 +196,10 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 0 0, rgba(15, 118, 110, 0.15), transparent 60%);
+      background: radial-gradient(circle at 0 0, rgba(15, 118, 110, 0.16), transparent 60%);
       opacity: 0;
-      transition: opacity var(--transition-fast), transform var(--transition-fast);
       transform: scale(0.9);
+      transition: opacity var(--transition-fast), transform var(--transition-fast);
       z-index: -1;
     }
 
@@ -236,25 +237,34 @@
       box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
     }
 
-    main {
+    .layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.05fr);
-      gap: 18px;
-      margin-top: 18px;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 16px;
+      margin-top: 14px;
     }
 
-    section {
+    .left, .right {
+      position: relative;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .hero-card {
       border-radius: var(--radius-xl);
       padding: 18px 18px 20px;
-      background: var(--bg-elevated);
+      background: var(--bg-card);
       border: 1px solid rgba(229, 231, 235, 0.9);
       box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
-      transform-origin: 50% 50%;
     }
 
-    section::before {
+    .hero-card::before {
       content: "";
       position: absolute;
       inset: 0;
@@ -266,37 +276,26 @@
       pointer-events: none;
     }
 
-    h2 {
-      font-size: 13px;
+    .hero-label {
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.2em;
       color: var(--text-softer);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    h2::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(to right, #e5e7eb, transparent);
-      opacity: 0.9;
+      margin-bottom: 10px;
     }
 
     .hero-title {
-      font-size: clamp(26px, 3vw, 30px);
-      letter-spacing: 0.04em;
-      text-transform: none;
-      margin-bottom: 8px;
+      font-size: clamp(26px, 3vw, 32px);
+      letter-spacing: 0.02em;
+      line-height: 1.12;
+      margin-bottom: 10px;
       color: var(--text-main);
     }
 
     .hero-sub {
-      font-size: 13px;
-      letter-spacing: 0.18em;
+      font-size: 12px;
       text-transform: uppercase;
+      letter-spacing: 0.19em;
       color: var(--text-soft);
       margin-bottom: 16px;
     }
@@ -305,14 +304,14 @@
       font-size: 13px;
       color: var(--text-soft);
       line-height: 1.7;
-      max-width: 580px;
+      max-width: 520px;
     }
 
     .hero-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
+      gap: 10px;
+      margin-top: 16px;
       align-items: center;
     }
 
@@ -320,8 +319,7 @@
       padding: 9px 16px;
       border-radius: 999px;
       border: 1px solid rgba(15, 118, 110, 0.65);
-      background:
-        linear-gradient(120deg, #0f766e, #14b8a6);
+      background: linear-gradient(120deg, #0f766e, #14b8a6);
       color: #ecfeff;
       font-size: 12px;
       letter-spacing: 0.14em;
@@ -356,9 +354,9 @@
     }
 
     .summary-stat {
-      padding: 7px 12px;
+      padding: 7px 11px;
       border-radius: 999px;
-      border: 1px solid rgba(209, 213, 219, 0.9);
+      border: 1px solid rgba(209, 213, 219, 0.95);
       font-size: 11px;
       color: var(--text-soft);
       background: #f9fafb;
@@ -371,17 +369,17 @@
       color: var(--text-softer);
     }
 
-    .chip-row {
+    .hero-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 7px;
       margin-top: 12px;
     }
 
-    .chip {
+    .tag {
       padding: 6px 9px;
       border-radius: 999px;
-      border: 1px solid rgba(209, 213, 219, 0.9);
+      border: 1px solid rgba(209, 213, 219, 0.95);
       font-size: 10.5px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
@@ -389,116 +387,140 @@
       background: rgba(248, 250, 252, 0.96);
     }
 
-    .stack-list {
+    .info-card {
+      border-radius: var(--radius-lg);
+      padding: 14px 14px 12px;
+      background: var(--bg-card);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text-softer);
+      margin-bottom: 8px;
+    }
+
+    .info-row {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-top: 4px;
       font-size: 11px;
       color: var(--text-soft);
     }
 
-    .stack-pill {
+    .info-pill {
       padding: 6px 9px;
       border-radius: 999px;
       border: 1px solid rgba(209, 213, 219, 0.9);
       background: #f9fafb;
     }
 
-    .stack-pill strong {
+    .info-pill strong {
       font-weight: 600;
       color: var(--text-main);
     }
 
-    .timeline {
+    .right {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-top: 4px;
+      gap: 14px;
+      position: relative;
     }
 
-    .timeline-item {
-      padding: 10px 11px;
-      border-radius: 14px;
-      border: 1px solid rgba(229, 231, 235, 0.95);
-      background: linear-gradient(135deg, #ffffff, #f9fafb);
+    .rail-shell {
+      position: sticky;
+      top: 72px;
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.9fr);
-      gap: 6px 10px;
-      align-items: baseline;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .rail {
+      border-radius: var(--radius-lg);
+      padding: 14px 12px;
+      background: var(--bg-card);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
-      transition:
-        transform var(--transition-fast),
-        box-shadow var(--transition-fast),
-        border-color var(--transition-fast),
-        background var(--transition-fast);
     }
 
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 0 0, rgba(15, 118, 110, 0.12), transparent 60%);
-      opacity: 0;
-      transition: opacity var(--transition-med);
-      pointer-events: none;
-      mix-blend-mode: soft-light;
+    .rail-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text-softer);
+      margin-bottom: 12px;
     }
 
-    .timeline-item:hover {
-      transform: translateY(-2px);
-      border-color: rgba(148, 163, 184, 0.9);
-      box-shadow: var(--shadow-hover);
-      background: #ffffff;
+    .rail-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 11.5px;
+      color: var(--text-soft);
     }
 
-    .timeline-item:hover::before {
-      opacity: 1;
-    }
-
-    .timeline-main {
+    .rail-item {
+      padding: 7px 9px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      background: transparent;
+      cursor: pointer;
       display: flex;
       flex-direction: column;
       gap: 2px;
+      transition:
+        background var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast),
+        transform var(--transition-fast);
     }
 
-    .timeline-title {
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-main);
-    }
-
-    .timeline-sub {
-      font-size: 11px;
-      color: var(--text-soft);
-    }
-
-    .timeline-meta {
-      font-size: 11px;
-      text-align: right;
+    .rail-item span {
+      font-size: 10px;
       color: var(--text-softer);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
     }
 
-    .timeline-descr {
-      grid-column: 1 / -1;
-      font-size: 11.5px;
-      color: var(--text-soft);
-      margin-top: 3px;
+    .rail-item.active {
+      background: var(--accent-soft);
+      border-color: rgba(15, 118, 110, 0.55);
+      color: var(--accent);
+      transform: translateX(1px);
     }
 
-    .project-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
+    .rail-indicator {
+      position: absolute;
+      left: 0;
+      width: 3px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #0f766e, #14b8a6);
+      height: 28px;
+      transform: translateY(4px);
+      transition: transform var(--transition-med);
+    }
+
+    .project-stack {
+      display: flex;
+      flex-direction: column;
       gap: 10px;
     }
 
     .project-card {
-      border-radius: 16px;
-      border: 1px solid rgba(209, 213, 219, 0.95);
-      padding: 11px 12px;
+      border-radius: 18px;
+      border: 1px solid rgba(229, 231, 235, 0.95);
+      padding: 12px 13px;
       background: linear-gradient(145deg, #ffffff, #f9fafb);
+      box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
       transform-origin: 50% 50%;
@@ -523,9 +545,9 @@
     }
 
     .project-card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-2px);
       border-color: rgba(148, 163, 184, 0.95);
-      box-shadow: var(--shadow-hover);
+      box-shadow: var(--shadow-strong);
       background: #ffffff;
     }
 
@@ -579,12 +601,54 @@
       background: #f9fafb;
     }
 
+    .section-block {
+      margin-top: 18px;
+      border-radius: var(--radius-xl);
+      padding: 16px 16px 14px;
+      background: var(--bg-card);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text-softer);
+      margin-bottom: 8px;
+    }
+
+    .section-body {
+      font-size: 12px;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    .section-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .section-pill {
+      padding: 6px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(209, 213, 219, 0.95);
+      background: #f9fafb;
+    }
+
     .contact-row {
       display: flex;
       flex-direction: column;
       gap: 10px;
       font-size: 12px;
       color: var(--text-soft);
+      margin-top: 8px;
     }
 
     .contact-label {
@@ -609,7 +673,7 @@
     }
 
     .footer {
-      margin-top: 12px;
+      margin-top: 14px;
       font-size: 10px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
@@ -619,10 +683,6 @@
       gap: 8px;
       padding-top: 10px;
       border-top: 1px solid rgba(229, 231, 235, 0.9);
-    }
-
-    .footer span {
-      opacity: 0.9;
     }
 
     .spark {
@@ -639,7 +699,6 @@
       box-shadow: 0 0 14px rgba(13, 148, 136, 0.7);
     }
 
-    /* Scroll reveal for cards */
     .observe {
       opacity: 0;
       transform: translateY(18px) scale(0.99);
@@ -657,8 +716,13 @@
       filter: blur(0);
     }
 
-    @media (max-width: 880px) {
-      main {
+    @media (max-width: 960px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .rail-shell {
+        position: static;
         grid-template-columns: minmax(0, 1fr);
       }
 
@@ -673,20 +737,12 @@
         flex-wrap: wrap;
       }
 
-      .timeline-item {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .timeline-meta {
-        text-align: left;
-      }
-
       body {
         padding: 18px 10px 26px;
       }
 
       .shell {
-        padding: 18px 18px 22px;
+        padding: 16px 16px 22px;
         border-radius: 26px;
       }
     }
@@ -707,20 +763,18 @@
     <div class="orb orb-2"></div>
 
     <header>
-      <div class="id-block">
-        <div class="avatar-shell">
-          <span class="avatar-initials">JB</span>
-        </div>
-        <div class="id-meta">
-          <div class="name">Jayeetra Bhattacharjee</div>
-          <div class="role">AI / ML Engineer · MSc Business Analytics</div>
+      <div class="brand">
+        <div class="brand-mark"><span>JB</span></div>
+        <div class="brand-meta">
+          <div class="brand-name">Jayeetra</div>
+          <div class="brand-sub">AI systems & analytics</div>
         </div>
       </div>
 
       <nav>
-        <a href="#about">About</a>
+        <a href="#hero">Home</a>
+        <a href="#projects">Work</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -730,190 +784,201 @@
       </span>
     </header>
 
-    <main>
-      <!-- Left column -->
-      <section id="about" class="observe">
-        <h2>Profile</h2>
-        <h1 class="hero-title">Building AI systems that ship and scale</h1>
-        <p class="hero-sub">LLM products · analytics platforms · automation</p>
-        <p class="hero-body">
-          Consulting-minded AI / ML engineer with ~3 years delivering LLM, analytics, and automation solutions for global retail and enterprise clients at TCS, now based in Bristol. [file:1]
-          I focus on turning messy data and experiments into production systems: clear interfaces, robust pipelines, and measurable impact on decision speed, compliance, and revenue. [file:1]
-        </p>
+    <div class="layout">
+      <!-- LEFT: narrative and context -->
+      <div class="left">
+        <section id="hero" class="hero-card observe">
+          <div class="hero-label">AI portfolio · 2026</div>
+          <h1 class="hero-title">Designing AI systems that ship, not just demo.</h1>
+          <p class="hero-sub">LLM products · decision engines · automation</p>
+          <p class="hero-body">
+            AI / ML engineer with ~3 years experience delivering LLM, analytics, and automation solutions
+            for global retail and enterprise clients at TCS, now based in Bristol and studying MSc Business
+            Analytics at the University of Bristol. [file:1]
+            I partner with product and ops teams to translate messy data and experiments into reliable,
+            measurable systems that improve decision speed, compliance, and revenue. [file:1]
+          </p>
 
-        <div class="hero-row">
-          <button class="primary-btn"
-            onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
-            Contact
-            <span>↗</span>
-          </button>
-          <div class="summary-stat">
-            3+ years delivery
-            <span>AI, LLMs, automation</span>
-          </div>
-          <div class="summary-stat">
-            MSc Business Analytics
-            <span>University of Bristol</span>
-          </div>
-        </div>
-
-        <div class="chip-row">
-          <div class="chip">LLM product engineering</div>
-          <div class="chip">Decision & insight systems</div>
-          <div class="chip">Enterprise automation</div>
-        </div>
-      </section>
-
-      <!-- Right column -->
-      <section class="observe">
-        <h2>Focus & stack</h2>
-        <div class="stack-list">
-          <div class="stack-pill"><strong>Python</strong> · pandas · scikit-learn</div>
-          <div class="stack-pill"><strong>LLMs</strong> · OpenAI · Gemini · Hugging Face</div>
-          <div class="stack-pill">NLP · text-to-SQL · semantic search</div>
-          <div class="stack-pill">AWS · SageMaker · Docker</div>
-          <div class="stack-pill">Relational & NoSQL · SQL</div>
-          <div class="stack-pill">Dashboards · data storytelling</div>
-        </div>
-        <p class="hero-body" style="margin-top:12px;">
-          Recent work spans ensemble LLM pipelines on SageMaker, AI audit engines preventing revenue leakage, and “talk-to-data” layers that give non-technical teams safe, guided access to SQL data. [file:1]
-        </p>
-      </section>
-
-      <section id="experience" class="observe">
-        <h2>Experience</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-main">
-              <div class="timeline-title">AI / ML Engineer</div>
-              <div class="timeline-sub">Tata Consultancy Services · Kolkata, India</div>
+          <div class="hero-row">
+            <button class="primary-btn"
+              onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+              Contact
+              <span>↗</span>
+            </button>
+            <div class="summary-stat">
+              3+ years delivery
+              <span>AI, LLMs, automation</span>
             </div>
-            <div class="timeline-meta">Jan 2024 – Sep 2025</div>
-            <p class="timeline-descr">
-              Delivered AI-driven analytics, LLM, and automation solutions for retail, fashion, and electronics clients, improving decision-making speed, compliance accuracy, and operational efficiency across large transaction volumes. [file:1]
-            </p>
+            <div class="summary-stat">
+              MSc Business Analytics
+              <span>University of Bristol</span>
+            </div>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-main">
-              <div class="timeline-title">Java Developer</div>
-              <div class="timeline-sub">Tata Consultancy Services · Kolkata, India</div>
-            </div>
-            <div class="timeline-meta">Jul 2022 – Dec 2023</div>
-            <p class="timeline-descr">
-              Built microservice commerce platforms handling 100K+ daily transactions and integrated order and payment flows (Hybris, Juspay, OMS) for over 1M annual orders, with improved API performance and reporting. [file:1]
-            </p>
+          <div class="hero-tags">
+            <span class="tag">LLM product engineering</span>
+            <span class="tag">Decision & insight systems</span>
+            <span class="tag">Enterprise-scale automation</span>
           </div>
+        </section>
 
-          <div class="timeline-item">
-            <div class="timeline-main">
-              <div class="timeline-title">Research Assistant · AI & analytics</div>
-              <div class="timeline-sub">University of Bristol · United Kingdom</div>
-            </div>
-            <div class="timeline-meta">Oct 2025 – Present</div>
-            <p class="timeline-descr">
-              Supporting ML models (Random Forest, XGBoost) for maritime behaviour and performance analytics, plus GIS data workflows and LLM-based insight evaluation for urban planning research. [file:1]
-            </p>
+        <section class="info-card observe">
+          <div class="info-title">Capabilities</div>
+          <div class="info-row">
+            <span class="info-pill"><strong>Python</strong>, pandas, scikit-learn</span>
+            <span class="info-pill"><strong>LLMs</strong> · OpenAI, Gemini, Hugging Face</span>
+            <span class="info-pill">NLP · text-to-SQL · semantic search</span>
+            <span class="info-pill">AWS · SageMaker · Docker</span>
+            <span class="info-pill">SQL · relational & NoSQL</span>
+            <span class="info-pill">Dashboards · data storytelling</span>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="projects" class="observe">
-        <h2>Selected work</h2>
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-header">
-              <div class="project-title">AI audit validation engine</div>
-              <div class="project-tag">Revenue protection</div>
-            </div>
-            <p class="project-body">
-              Python + LLM engine validating POS transactions for a retail client, lifting audit accuracy from 60–90% and preventing ~£500K annual revenue leakage through automated checks and rule-based reasoning. [file:1]
-            </p>
-            <div class="project-meta">
-              <span>Python</span>
-              <span>LLMs</span>
-              <span>Automation</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <div class="project-title">LLM insight-mining engine</div>
-              <div class="project-tag">Decision speed</div>
-            </div>
-            <p class="project-body">
-              Multi-model LLM system (GPT-4, Gemini, Claude, HF) automating business hypothesis testing, reducing analysis cycles from 3 days to 6 hours with ranked, traceable outputs for analytics teams. [file:1]
-            </p>
-            <div class="project-meta">
-              <span>LLM ensemble</span>
-              <span>Prompt design</span>
-              <span>Analytics</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <div class="project-title">LLM ensemble on SageMaker</div>
-              <div class="project-tag">Production ML</div>
-            </div>
-            <p class="project-body">
-              Designed and deployed an LLM ensemble pipeline with ranking and evaluation, achieving 90–95% accuracy and serving production workloads via AWS SageMaker. [file:1]
-            </p>
-            <div class="project-meta">
-              <span>AWS SageMaker</span>
-              <span>Deployment</span>
-              <span>Monitoring</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <div class="project-title">Text-to-SQL talk-to-data</div>
-              <div class="project-tag">Data access</div>
-            </div>
-            <p class="project-body">
-              FastAPI LLM backend that translates natural language into SQL, enabling non-technical stakeholders to query relational data safely without writing queries, with guardrails around access and semantics. [file:1]
-            </p>
-            <div class="project-meta">
-              <span>FastAPI</span>
-              <span>Text-to-SQL</span>
-              <span>Security</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="observe">
-        <h2>Contact</h2>
-        <div class="contact-row">
-          <div>
-            <div class="contact-label">Email</div>
-            <a href="mailto:jayeetra.uk@gmail.com">jayeetra.uk@gmail.com</a>
+        <section id="experience" class="section-block observe">
+          <div class="section-title">Experience</div>
+          <div class="section-body">
+            Tata Consultancy Services, Kolkata — AI / ML Engineer (Jan 2024 – Sep 2025). Delivered AI-driven analytics, LLM, and automation
+            solutions for retail, fashion, and electronics clients, improving decision-making, compliance accuracy, and operational efficiency. [file:1]
           </div>
-          <div>
-            <div class="contact-label">Location</div>
-            <span>Bristol, United Kingdom</span>
+          <div class="section-grid">
+            <span class="section-pill">AI / ML Engineer · TCS</span>
+            <span class="section-pill">Java Developer · TCS</span>
+            <span class="section-pill">Research Assistant · University of Bristol</span>
           </div>
-          <div>
-            <div class="contact-label">LinkedIn</div>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-              Add your LinkedIn URL here
-            </a>
+        </section>
+
+        <section id="contact" class="section-block observe">
+          <div class="section-title">Contact</div>
+          <div class="contact-row">
+            <div>
+              <div class="contact-label">Email</div>
+              <a href="mailto:jayeetra.uk@gmail.com">jayeetra.uk@gmail.com</a>
+            </div>
+            <div>
+              <div class="contact-label">Location</div>
+              <span>Bristol, United Kingdom</span>
+            </div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+                Add your LinkedIn URL here
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </div>
+
+      <!-- RIGHT: sticky project rail with advanced motion -->
+      <div class="right">
+        <section id="projects" class="observe">
+          <div class="rail-shell">
+            <aside class="rail">
+              <div class="rail-title">Case studies</div>
+              <div class="rail-indicator" id="rail-indicator"></div>
+              <ul class="rail-list" id="rail-list">
+                <li class="rail-item active" data-target="proj-1">
+                  AI audit validation engine
+                  <span>Revenue protection</span>
+                </li>
+                <li class="rail-item" data-target="proj-2">
+                  LLM insight-mining engine
+                  <span>Decision speed</span>
+                </li>
+                <li class="rail-item" data-target="proj-3">
+                  LLM ensemble on SageMaker
+                  <span>Production ML</span>
+                </li>
+                <li class="rail-item" data-target="proj-4">
+                  Text-to-SQL talk-to-data
+                  <span>Data accessibility</span>
+                </li>
+              </ul>
+            </aside>
+
+            <div class="project-stack" id="project-stack">
+              <article class="project-card" id="proj-1">
+                <div class="project-header">
+                  <div class="project-title">AI audit validation engine</div>
+                  <div class="project-tag">Revenue protection</div>
+                </div>
+                <p class="project-body">
+                  Python + LLM engine validating POS transactions for a retail client, lifting audit
+                  accuracy from 60–90% and preventing ~£500K annual revenue leakage through automated
+                  anomaly checks and rule-based reasoning. [file:1]
+                </p>
+                <div class="project-meta">
+                  <span>Python</span>
+                  <span>LLMs</span>
+                  <span>Automation</span>
+                </div>
+              </article>
+
+              <article class="project-card" id="proj-2">
+                <div class="project-header">
+                  <div class="project-title">LLM insight-mining engine</div>
+                  <div class="project-tag">Decision speed</div>
+                </div>
+                <p class="project-body">
+                  Multi-model LLM system (GPT-4, Gemini, Claude, HF) automating business hypothesis testing,
+                  reducing analysis cycles from 3 days to 6 hours with ranked, traceable insights for analytics
+                  teams. [file:1]
+                </p>
+                <div class="project-meta">
+                  <span>LLM ensemble</span>
+                  <span>Prompt design</span>
+                  <span>Analytics</span>
+                </div>
+              </article>
+
+              <article class="project-card" id="proj-3">
+                <div class="project-header">
+                  <div class="project-title">LLM ensemble on SageMaker</div>
+                  <div class="project-tag">Production ML</div>
+                </div>
+                <p class="project-body">
+                  Designed and deployed an LLM ensemble pipeline with ranking and evaluation, achieving
+                  90–95% accuracy and serving client workloads end-to-end via AWS SageMaker. [file:1]
+                </p>
+                <div class="project-meta">
+                  <span>AWS SageMaker</span>
+                  <span>LLM ops</span>
+                  <span>Monitoring</span>
+                </div>
+              </article>
+
+              <article class="project-card" id="proj-4">
+                <div class="project-header">
+                  <div class="project-title">Text-to-SQL talk-to-data</div>
+                  <div class="project-tag">Data access</div>
+                </div>
+                <p class="project-body">
+                  FastAPI LLM backend translating natural language into SQL, enabling non-technical stakeholders
+                  to query relational data safely without writing queries, with guardrails around access and
+                  semantics. [file:1]
+                </p>
+                <div class="project-meta">
+                  <span>FastAPI</span>
+                  <span>Text-to-SQL</span>
+                  <span>Security</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
 
     <footer class="footer">
       <span>© 2026 · Jayeetra Bhattacharjee</span>
       <span class="spark">
         <span class="spark-dot"></span>
-        Portfolio • AI-first
+        AI portfolio · live systems
       </span>
     </footer>
   </div>
 
   <script>
+    // Scroll reveal
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
@@ -923,10 +988,63 @@
           }
         });
       },
-      { threshold: 0.16 }
+      { threshold: 0.18 }
+    );
+    document.querySelectorAll(".observe").forEach(el => observer.observe(el));
+
+    // Project rail indicator + sync on scroll
+    const railList = document.getElementById("rail-list");
+    const railItems = Array.from(railList.querySelectorAll(".rail-item"));
+    const indicator = document.getElementById("rail-indicator");
+    const projects = railItems.map(item =>
+      document.getElementById(item.getAttribute("data-target"))
     );
 
-    document.querySelectorAll(".observe").forEach(el => observer.observe(el));
+    function updateIndicatorToActive() {
+      const active = railList.querySelector(".rail-item.active");
+      if (!active) return;
+      const rect = active.getBoundingClientRect();
+      const parentRect = railList.getBoundingClientRect();
+      const offset = rect.top - parentRect.top;
+      indicator.style.transform = `translateY(${offset + 4}px)`;
+      indicator.style.height = rect.height - 8 + "px";
+    }
+
+    updateIndicatorToActive();
+    window.addEventListener("resize", updateIndicatorToActive);
+
+    railItems.forEach(item => {
+      item.addEventListener("click", () => {
+        const targetId = item.getAttribute("data-target");
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      });
+    });
+
+    const projObserver = new IntersectionObserver(
+      entries => {
+        let bestEntry = null;
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          if (!bestEntry || entry.intersectionRatio > bestEntry.intersectionRatio) {
+            bestEntry = entry;
+          }
+        });
+        if (bestEntry) {
+          const id = bestEntry.target.id;
+          railItems.forEach(item => {
+            const isActive = item.getAttribute("data-target") === id;
+            item.classList.toggle("active", isActive);
+          });
+          updateIndicatorToActive();
+        }
+      },
+      { root: null, threshold: [0.25, 0.5, 0.75] }
+    );
+
+    projects.forEach(p => projObserver.observe(p));
   </script>
 </body>
 </html>
