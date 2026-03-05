@@ -15,9 +15,11 @@ const Footer = () => {
       <div className="w-full flex flex-col md:flex-row items-center md:justify-between gap-6">
         
         {/* Judul - paling atas di mobile */}
-        <h1 className="text-2xl font-bold order-1 md:order-none">
-          Portofolio
-        </h1>
+        <img
+  src="/assets/favicon.ico"
+  alt="Logo"
+  className="w-10 h-10 order-1 md:order-none"
+/>
 
         {/* Ikon Sosmed - di tengah di mobile */}
         <div className="flex gap-3 order-2 md:order-none">
