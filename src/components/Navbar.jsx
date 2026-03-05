@@ -24,9 +24,11 @@ const Navbar = ({ hidden = false }) => {
     >
       {/* Logo — text only, no image */}
       <div className="logo">
-        <a href="#home" className="logo-text text-lg font-bold tracking-wide">
-          My portfolio
-        </a>
+        <img
+  src="/assets/favicon.ico"
+  alt="Logo"
+  className="w-10 h-10 order-1 md:order-none"
+/>
       </div>
 
       {/* Nav links — slides down from top after scroll */}
