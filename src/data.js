@@ -8,18 +8,18 @@ export default Image;
 
 
 export const listTools = [
-  { id: 1,  gambar: "/portofolio/assets/tools/python.png",   nama: "Python",             ket: "pandas, NumPy, scikit-learn",        dad: "100"  },
-  { id: 2,  gambar: "/portofolio/assets/tools/ML.png",        nama: "Machine Learning",   ket: "Supervised & Unsupervised",          dad: "200"  },
-  { id: 3,  gambar: "/portofolio/assets/tools/ai.jpg",        nama: "LLMs & NLP",         ket: "GPT-4, Gemini, Claude, HuggingFace", dad: "300"  },
-  { id: 4,  gambar: "/portofolio/assets/tools/aws.png",       nama: "AWS SageMaker",      ket: "Cloud ML Deployment",                dad: "400"  },
-  { id: 5,  gambar: "/portofolio/assets/tools/java.png",      nama: "Java & Spring Boot", ket: "Microservices, REST APIs",           dad: "500"  },
-  { id: 6,  gambar: "/portofolio/assets/tools/SQL.jpg",       nama: "SQL & NoSQL",        ket: "Databases, ETL, Text-to-SQL",        dad: "600"  },
-  { id: 7,  gambar: "/portofolio/assets/tools/firebase.png",  nama: "Firebase",           ket: "Firestore, Auth",                    dad: "700"  },
-  { id: 8,  gambar: "/portofolio/assets/tools/github.png",    nama: "GitHub",             ket: "Version Control",                    dad: "800"  },
-  { id: 9,  gambar: "/portofolio/assets/tools/docker.png",    nama: "Docker & CI/CD",     ket: "DevOps & Deployment",                dad: "900"  },
-  { id: 10, gambar: "/portofolio/assets/tools/data.png",      nama: "Data Visualisation", ket: "Matplotlib, Seaborn, Dashboards",    dad: "1000" },
-  { id: 11, gambar: "/portofolio/assets/tools/tailwind.png",  nama: "Tailwind CSS",       ket: "UI Framework",                       dad: "1100" },
-  { id: 12, gambar: "/portofolio/assets/tools/reactjs.png",   nama: "React & Vite",       ket: "Frontend Framework",                 dad: "1200" },
+  { id: 1,  gambar: "/assets/tools/python.png",   nama: "Python",             ket: "pandas, NumPy, scikit-learn",        dad: "100"  },
+  { id: 2,  gambar: "/assets/tools/ML.png",        nama: "Machine Learning",   ket: "Supervised & Unsupervised",          dad: "200"  },
+  { id: 3,  gambar: "/assets/tools/ai.jpg",        nama: "LLMs & NLP",         ket: "GPT-4, Gemini, Claude, HuggingFace", dad: "300"  },
+  { id: 4,  gambar: "/assets/tools/aws.png",       nama: "AWS SageMaker",      ket: "Cloud ML Deployment",                dad: "400"  },
+  { id: 5,  gambar: "/assets/tools/java.png",      nama: "Java & Spring Boot", ket: "Microservices, REST APIs",           dad: "500"  },
+  { id: 6,  gambar: "/assets/tools/SQL.jpg",       nama: "SQL & NoSQL",        ket: "Databases, ETL, Text-to-SQL",        dad: "600"  },
+  { id: 7,  gambar: "/assets/tools/firebase.png",  nama: "Firebase",           ket: "Firestore, Auth",                    dad: "700"  },
+  { id: 8,  gambar: "/assets/tools/github.png",    nama: "GitHub",             ket: "Version Control",                    dad: "800"  },
+  { id: 9,  gambar: "/assets/tools/docker.png",    nama: "Docker & CI/CD",     ket: "DevOps & Deployment",                dad: "900"  },
+  { id: 10, gambar: "/assets/tools/data.png",      nama: "Data Visualisation", ket: "Matplotlib, Seaborn, Dashboards",    dad: "1000" },
+  { id: 11, gambar: "/assets/tools/tailwind.png",  nama: "Tailwind CSS",       ket: "UI Framework",                       dad: "1100" },
+  { id: 12, gambar: "/assets/tools/reactjs.png",   nama: "React & Vite",       ket: "Frontend Framework",                 dad: "1200" },
 ];
 
 export const listProyek = [
