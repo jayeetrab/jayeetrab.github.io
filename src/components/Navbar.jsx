@@ -27,7 +27,7 @@ const Navbar = ({ hidden = false }) => {
         <img
   src="/assets/favicon.ico"
   alt="Logo"
-  className="w-10 h-10 order-1 md:order-none"
+  className="w-30 h-30 order-1 md:order-none"
 />
       </div>
 
