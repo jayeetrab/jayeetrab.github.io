@@ -97,8 +97,8 @@ function App() {
             <ProfileCard
               name="Jayeetra Bhattacharjee"
               title="AI / ML Engineer"
-              handle="jayeetra"
-              status="Open to work"
+              handle="jayeetrab"
+              status="Bristol, United Kingdom"
               contactText="Contact Me"
               avatarUrl="./assets/jay1.jpg"
               showUserInfo={true}
