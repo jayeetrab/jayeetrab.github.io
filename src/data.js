@@ -25,7 +25,7 @@ export const listTools = [
 export const listProyek = [
   {
     id: 1,
-    title: "AI-Powered Audit Validation Engine | Titan",
+    title: "AI-Powered Audit Validation Engine ",
     subtitle: "LLM-driven transaction validation for retail clients.",
     fullDescription:
       "Developed a Large Language Model-based transaction validation engine for a retail client, improving audit accuracy from 60% to 90% and preventing over £500K in annual revenue leakage.",
@@ -35,7 +35,7 @@ export const listProyek = [
   },
   {
     id: 2,
-    title: "AI Compliance Reporting Engine | Marks and Spencer",
+    title: "AI Compliance Reporting Engine ",
     subtitle: "Automated classification and anomaly checks.",
     fullDescription:
       "Built an AI + rule-based system that increased compliance reporting accuracy from 40% to 80% across 5,000+ monthly transactions by automating data checks and anomaly detection.",
@@ -45,7 +45,7 @@ export const listProyek = [
   },
   {
     id: 3,
-    title: "LLM Insight-Mining Engine | H&M",
+    title: "LLM Insight-Mining Engine ",
     subtitle: "Automated business hypothesis testing.",
     fullDescription:
       "Created an LLM-driven system using GPT-4, Gemini, Claude, and Hugging Face models that automated hypothesis testing and reduced analysis time from 3 days to 6 hours.",
@@ -55,7 +55,7 @@ export const listProyek = [
   },
   {
     id: 4,
-    title: "LLM Ensemble on AWS SageMaker | Primark",
+    title: "LLM Ensemble on AWS SageMaker ",
     subtitle: "Production-ready multi-model LLM pipeline.",
     fullDescription:
       "Designed a multi-model LLM ensemble with ranking and evaluation, achieving 90–95% accuracy and deploying it end-to-end on AWS SageMaker for scalable client use.",
@@ -65,7 +65,7 @@ export const listProyek = [
   },
   {
     id: 5,
-    title: 'Text-to-SQL "Talk-to-Data" System | TFG',
+    title: 'Text-to-SQL "Talk-to-Data" System ',
     subtitle: "Natural language interface for SQL databases.",
     fullDescription:
       "Built a FastAPI + LLM backend that lets non-technical users query SQL databases using natural language, returning validated SQL and insights.",
@@ -75,7 +75,7 @@ export const listProyek = [
   },
   {
     id: 6,
-    title: "POS Automation & Revenue Protection | Tata Tanishq",
+    title: "POS Automation & Revenue Protection ",
     subtitle: "Automated POS validation to protect revenue.",
     fullDescription:
       "Automated POS transaction validation for a jewellery brand, increasing accuracy from 60% to 90% and preventing over £500K in annual revenue leakage.",
