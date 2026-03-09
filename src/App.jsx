@@ -142,7 +142,7 @@ function App() {
             <div className="grid grid-cols-2 gap-px bg-white/[0.04]">
               {[
                 { value: "3+",      label: "Years in production AI", sub: "Not just research" },
-                { value: "10+",     label: "Projects shipped",        sub: "End to end" },
+                { value: "51+",     label: "Projects shipped",        sub: "End to end" },
                 { value: "£500K+",  label: "Revenue protected",       sub: "Via ML systems" },
                 { value: "90–95%",  label: "Model accuracy",          sub: "Across deployments" },
               ].map((stat, i) => (
