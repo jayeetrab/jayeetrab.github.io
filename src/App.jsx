@@ -457,7 +457,7 @@ function App() {
 
             {/* Right form */}
             <form
-              action="https://formsubmit.co/jayeetra.uk@gmail.com"
+              action="https://formspree.io/f/mnjgjpqa"
               method="POST"
               autoComplete="off"
               data-aos="fade-up" data-aos-delay="120"

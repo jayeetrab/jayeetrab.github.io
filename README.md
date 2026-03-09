@@ -116,7 +116,7 @@ Key parts you can customise:
 - **Identity & content:** `App.jsx` (name, title, About Me, stats, motto) [file:8]
 - **Projects & links:** `data.js` → `listProyek` [file:7]
 - **Tools / skills:** `data.js` → `listTools` [file:7]
-- **Contact form:** `App.jsx` → `form action="https://formsubmit.co/..."` (set to your email) [file:8][file:12]
+- **Contact form:** `App.jsx` → `form action="https://formspree.io/f/mnjgjpqa"` (set to your email) [file:8][file:12]
 - **Firebase chat (optional):** `firebase.js` (fill in your Firebase config if you enable chat) [file:9]
 
 ## 🧠 Content Mapping to CV
